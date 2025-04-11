@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { db } from '../firebase';
+import '../styles/globals.css';
 
 export default function Home() {
   const [name, setName] = useState('');
@@ -39,24 +40,19 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <div className='container'>
+      <img
+        src="/rabbit.png" // Replace with your rabbit image path if available
+        alt="Easter Rabbit"
+        className="rabbit-image"
+      />
       <h1>Egg Hunt</h1>
       <form onSubmit={joinHunt}>
-        <input
-          type="text"
-          placeholder="Enter your name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+        <input type="text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)} />
         <button type="submit">Join Hunt</button>
       </form>
       <form onSubmit={registerEgg}>
-        <input
-          type="text"
-          placeholder="Enter egg number"
-          value={eggNumber}
-          onChange={(e) => setEggNumber(e.target.value)}
-        />
+        <input type="text" placeholder="Enter egg number" value={eggNumber} onChange={(e) => setEggNumber(e.target.value)} />
         <button type="submit">Register Egg</button>
       </form>
       <button onClick={announceWinner}>Announce Winner</button>
