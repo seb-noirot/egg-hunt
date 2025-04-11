@@ -1,6 +1,13 @@
 # egg-hunt
 Egg hunt app that helps hunter register their prey!
 
+## Create a Next.js App
+
+1. Install Node.js from [nodejs.org](https://nodejs.org/).
+2. Create a new Next.js app by running `npx create-next-app@latest`.
+3. Follow the instructions to set up your Next.js app.
+4. Navigate to the project directory by running `cd your-project-name`.
+
 ## Firebase Setup
 
 1. Go to the [Firebase Console](https://console.firebase.google.com/).
